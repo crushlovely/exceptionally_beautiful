@@ -10,14 +10,17 @@ A Rails engine for handling error pages.
 
 ## Setup
 
-The only mandatory piece of setup is to add the route helper to `config/routes.rb`:
+Getting up-and-running is simple. Just use the built-in generator:
 
-``` ruby
-Rails.application.routes.draw do
-  # This can usually be put at the end of your routes
-  exceptionally_beautiful_routes
-end
+``` bash
+bundle exec rails g exceptionally_beautiful:install
 ```
+
+The generator will:
+
+* Add the route helper to `config/routes.rb`
+* Add an initializer that you can customize in `config/initializers/exceptionally_beautiful.rb`
+* Copy over the translation data to `config/locales/exceptionally_beautiful.en.yml`
 
 ## What You Get
 
