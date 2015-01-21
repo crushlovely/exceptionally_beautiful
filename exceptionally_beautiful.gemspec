@@ -14,7 +14,8 @@ Gem::Specification.new do |spec|
   spec.description = "A Rails engine for handling error pages."
   spec.license     = "MIT"
 
-  spec.files = Dir["{app,config,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
+  spec.files         = `git ls-files`.split("\n")
+  spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
 
   spec.add_dependency "rails", "~> 4.2.0.beta1"
   spec.add_development_dependency 'bundler', '~> 1.3'
