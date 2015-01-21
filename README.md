@@ -1,5 +1,11 @@
 # Exceptionally Beautiful
 
+[![RubyGem Version](http://img.shields.io/gem/v/exceptionally_beautiful.svg?style=flat)](https://rubygems.org/gems/exceptionally_beautiful)
+[![Dependency Status](http://img.shields.io/gemnasium/crushlovely/exceptionally_beautiful.svg?style=flat)](https://gemnasium.com/crushlovely/exceptionally_beautiful)
+[![Build Status](http://img.shields.io/travis/crushlovely/exceptionally_beautiful.svg?style=flat)](https://travis-ci.org/crushlovely/exceptionally_beautiful)
+[![Code Climate](http://img.shields.io/codeclimate/github/crushlovely/exceptionally_beautiful.svg?style=flat)](https://codeclimate.com/github/crushlovely/exceptionally_beautiful)
+[![Code Coverage](http://img.shields.io/codeclimate/coverage/github/crushlovely/exceptionally_beautiful.svg?style=flat)](https://codeclimate.com/github/crushlovely/exceptionally_beautiful)
+
 A Rails engine for handling error pages.
 
 ## Setup
