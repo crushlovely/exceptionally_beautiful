@@ -6,6 +6,7 @@ CodeClimate::TestReporter.start
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'production'
 
+require 'redcarpet'
 require File.expand_path('spec/test_app/config/environment')
 require 'rspec/rails'
 
