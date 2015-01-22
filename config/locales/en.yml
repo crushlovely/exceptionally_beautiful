@@ -3,18 +3,18 @@ en:
     default:
       title: "There's been an error"
       message: "Something has gone wrong. Please try again shortly."
-    forbidden:
+    :403:
       title: "Sorry, but you don't have access."
       message: "Please try a different request."
-    not_found:
+    :404:
       title: "The page you requested could not be found."
       message: "It may have moved."
-    unprocessable_entity:
+    :422:
       title: "The change you requested was rejected."
       message: "Please try a different request."
-    internal_server_error:
+    :500:
       title: "A fatal error has occurred."
       message: "Please try a different request."
-    bad_gateway:
+    :502:
       title: "The site is currently unavailable."
       message: "Please try again in a few moments!"

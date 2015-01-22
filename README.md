@@ -26,19 +26,19 @@ The generator will:
 
 Exceptionally Beautiful will handle any three-digit status code you throw at it. It comes with translation data for the following common errors:
 
-|         Error         | Code |
-|:---------------------:|------|
-| Forbidden             | 403  |
-| Not Found             | 404  |
-| Unprocessable Entity  | 422  |
-| Internal Server Error | 500  |
-| Bad Gateway           | 502  |
+| Code |         Error         |
+|------|:---------------------:|
+| 403  | Forbidden             |
+| 404  | Not Found             |
+| 422  | Unprocessable Entity  |
+| 500  | Internal Server Error |
+| 502  | Bad Gateway           |
 
 Any status code that is either unrecognized or missing translation data will fall back to default messaging.
 
 ## Customizing
 
-If the default controller, action, and/or layout don't suit your fancy, you can override any of them:
+If the default controller, action, and/or layout don't suit your fancy, you can override any of them in the initializer provided by the generator:
 
 ``` ruby
 ExceptionallyBeautiful.setup do |config|
@@ -46,6 +46,39 @@ ExceptionallyBeautiful.setup do |config|
   config.controller = 'exceptionally_beautiful/errors'
   config.action = 'show'
 end
+```
+
+### Error Messages
+
+You can customize and add new errors to the translation file copied over by the initializer (`config/locales/exceptionally_beautiful.en.yml`).
+
+#### I18n Gotcha
+
+Make sure that all new error codes in your translation file are prefixed with a `:`. This is needed for `I18n` translation lookups to work properly when using keys that are integers. See [this](https://github.com/svenfuchs/rails-i18n/issues/36) for more information. e.g.
+
+``` yaml
+en:
+  exceptionally_beautiful:
+    default:
+      title: "There's been an error"
+      message: "Something has gone wrong. Please try again shortly."
+    :401:
+      title: "Unauthorized"
+      message: "Leave and never come back!"
+```
+
+#### Markdown Formatting
+
+The `message` for each error can be formatted using Markdown. e.g.
+
+``` yaml
+  exceptionally_beautiful:
+    default:
+      title: "There's been an error"
+      message: |
+        Something has **gone wrong**. Please try again shortly.
+
+        Or just go [back to our home page](/)...
 ```
 
 ## Usage With `rescue_from`
@@ -60,4 +93,27 @@ class ApplicationController < ActionController::Base
     error_handler(404)
   end
 end
+```
+
+## Inspiration & Alternatives
+
+This is by no means the first library to tackle this problem. Check out these other alternatives before deciding what to use.
+
+* [Ryan Bates' Railscast](http://railscasts.com/episodes/53-handling-exceptions-revised)
+* [errship](https://github.com/logankoester/errship)
+* [error_pages_engine](https://github.com/lazylester/error_pages_engine)
+* [dynamic_error_pages](https://github.com/marcusg/dynamic_error_pages)
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+## Running tests
+
+```bash
+bundle exec guard
 ```

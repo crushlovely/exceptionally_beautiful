@@ -20,8 +20,8 @@ module ExceptionallyBeautiful
     yield self
   end
 
-  def self.translation_scope(error_code)
-    [translation_namespace, error_code].join('.')
+  def self.translation_scope(status_code)
+    [translation_namespace, status_code].join('.')
   end
 
   def self.log(message)
