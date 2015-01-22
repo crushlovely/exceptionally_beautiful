@@ -1,3 +1,5 @@
+require 'exceptionally_beautiful/markdown_renderer'
+require 'exceptionally_beautiful/html_renderer'
 require 'exceptionally_beautiful/engine'
 require 'exceptionally_beautiful/routes'
 
