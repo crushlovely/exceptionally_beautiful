@@ -2,8 +2,56 @@
 <html>
 <head>
   <title>(<%= @error.status_code %>) <%= @error.title %></title>
+  <link href="//fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      font-family: "Oswald", arial, sans-serif;
+      font-size: 1em;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+    }
+    @media (min-width: 33em) {
+      body {
+        font-size: 1.25em;
+      }
+    }
+    @media (min-width: 37em) {
+      body {
+        font-size: 1.5em;
+      }
+    }
+    @media (min-width: 48em) {
+      body {
+        font-size: 1.75em;
+      }
+    }
+    .container {
+      margin: 3em;
+      padding: 3em;
+    }
+    h1 {
+      font-size: 1.25em;
+      color: #c00;
+      line-height: 1.5em;
+      font-weight: 400;
+    }
+    p {
+      width: 50%;
+      font-weight: 300;
+      font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 1em auto;
+    }
+    a { color: #f81717; }
+    a:hover { text-decoration: none; }
+  </style>
 </head>
 <body>
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>
