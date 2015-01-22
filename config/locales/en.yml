@@ -1,20 +1,22 @@
 en:
   exceptionally_beautiful:
     default:
-      title: "There's been an error"
-      message: "Something has gone wrong. Please try again shortly."
+      title: "We're sorry! The site has encountered an error."
+      message: "Something has gone wrong. Please try your last action again shortly."
     :403:
-      title: "Sorry, but you don't have access."
+      title: "We're sorry! You don't have access."
       message: "Please try a different request."
     :404:
-      title: "The page you requested could not be found."
-      message: "It may have moved."
+      title: "We're sorry! The page you requested could not be found."
+      message:  |
+        It may have moved or the path you entered may be incorrect.
+        Please check your URL and try again, or go back to our [homepage](/) to start again!
     :422:
-      title: "The change you requested was rejected."
-      message: "Please try a different request."
+      title: "We're sorry! The change you requested was rejected."
+      message: "Please try a different request. If you encountered this error after submitting a form, please use your browser's back arrow to return to that form and try again."
     :500:
-      title: "A fatal error has occurred."
-      message: "Please try a different request."
+      title: "We're sorry! A fatal internal server error has occurred."
+      message: "Please try back shortly."
     :502:
-      title: "The site is currently unavailable."
+      title: "We're sorry! The site is currently unavailable."
       message: "Please try again in a few moments!"
