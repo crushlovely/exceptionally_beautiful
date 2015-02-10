@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     exceptionally_beautiful (0.1.0)
-      rails (~> 4.2.0.beta1)
+      rails (~> 4.2.0)
       redcarpet (> 3.0.0)
 
 GEM

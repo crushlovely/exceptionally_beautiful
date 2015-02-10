@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files`.split("\n")
   spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
 
-  spec.add_dependency('rails', '~> 4.2.0.beta1')
+  spec.add_dependency('rails', '~> 4.2.0')
   spec.add_dependency('redcarpet', '> 3.0.0')
   spec.add_development_dependency('bundler', '~> 1.3')
   spec.add_development_dependency('pry')
