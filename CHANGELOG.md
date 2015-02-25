@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 0.1.2 (2015-02-25)
+
+* Specify error codes the gem will handle via `config.errors`.
+* Rake task for caching error pages in your app's public folder (see README for more information).
+* Capistrano integration (see README for more information).
+
+## 0.1.1 (2015-02-10)
+
+Removed beta restrictions from Rails dependency.
+
 ## 0.1.0 (2015-01-22)
 
 This release breaks the previous I18n translation file format. See the README for information on how the translation file should be setup now.
