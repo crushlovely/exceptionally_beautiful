@@ -7,5 +7,9 @@ module ExceptionallyBeautiful
     initializer 'exceptionally_beautiful.update_exceptions_app' do |app|
       app.config.exceptions_app = app.routes
     end
+
+    rake_tasks do
+      load config.root.join('lib/exceptionally_beautiful/tasks/exceptionally_beautiful.rake')
+    end
   end
 end

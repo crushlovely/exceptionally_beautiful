@@ -98,6 +98,14 @@ class ApplicationController < ActionController::Base
 end
 ```
 
+## Rake Task
+
+This library comes with a Rake task that caches your beautiful error pages as static HTML files in your application's public folder.
+
+``` bash
+bundle exec rake exceptionally_beautiful:cache
+```
+
 ## Inspiration & Alternatives
 
 This is by no means the first library to tackle this problem. Check out these other alternatives before deciding what to use.
