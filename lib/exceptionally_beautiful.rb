@@ -3,6 +3,9 @@ require 'exceptionally_beautiful/engine'
 require 'exceptionally_beautiful/routes'
 
 module ExceptionallyBeautiful
+  mattr_accessor :errors
+  self.errors = [403, 404, 422, 500, 502]
+
   mattr_accessor :controller
   self.controller = 'exceptionally_beautiful/errors'
 

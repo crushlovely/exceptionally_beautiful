@@ -38,15 +38,18 @@ Any status code that is either unrecognized or missing translation data will fal
 
 ## Customizing
 
-If the default controller, action, and/or layout don't suit your fancy, you can override any of them in the initializer provided by the generator:
+If the default errors, controller, action, and/or layout don't suit your fancy, you can override any of them in the initializer provided by the generator:
 
 ``` ruby
 ExceptionallyBeautiful.setup do |config|
+  config.errors = [403, 404, 422, 500, 502]
   config.layout = 'errors'
   config.controller = 'exceptionally_beautiful/errors'
   config.action = 'show'
 end
 ```
+
+**Important:** If you want Exceptionally Beautiful to handle an error code other than the defaults specified, it must be added to `config.errors` (and your translation file if you wish to customize the content).
 
 ### Error Messages
 
@@ -83,7 +86,7 @@ The `message` for each error can be formatted using Markdown. e.g.
 
 ## Usage With `rescue_from`
 
-If you're using Rails' `rescue_from` functionality, you can still use Exceptionally Beautiful:
+Using Rails' `rescue_from` in your controllers? You can use Exceptionally Beautiful's error handler there too:
 
 ``` ruby
 class ApplicationController < ActionController::Base

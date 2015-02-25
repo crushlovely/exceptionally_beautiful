@@ -12,7 +12,7 @@ feature 'something' do
   end
 
   describe 'default errors' do
-    [403, 404, 422, 500, 502].each do |error_code|
+    ExceptionallyBeautiful.errors.each do |error_code|
       describe "#{error_code} error messaging" do
         let(:error) { ExceptionallyBeautiful::Error.new(error_code) }
         before { visit "/errors/#{error_code}" }
