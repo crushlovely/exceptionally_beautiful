@@ -1,3 +1,5 @@
+require 'exceptionally_beautiful/html_renderer'
+
 module ExceptionallyBeautiful
   class MarkdownRenderer
     attr_reader :text
