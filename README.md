@@ -106,6 +106,20 @@ This library comes with a Rake task that caches your beautiful error pages as st
 bundle exec rake exceptionally_beautiful:cache
 ```
 
+## Capistrano Integration
+
+Want to cache your error pages as part of your deployment workflow? Use the included Capistrano 3 task:
+
+``` ruby
+# In your Capfile
+require 'exceptionally_beautiful/capistrano'
+
+# In your config/deploy.rb
+after 'deploy:compile_assets', 'exceptionally_beautiful:cache'
+```
+
+By default, the `exceptionally_beautiful:cache` task is only run on servers with the `:app` role, however you can override that by setting the `:exceptionally_beautiful_roles` option.
+
 ## Inspiration & Alternatives
 
 This is by no means the first library to tackle this problem. Check out these other alternatives before deciding what to use.
