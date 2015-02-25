@@ -24,7 +24,7 @@ The generator will:
 
 ## What You Get
 
-Exceptionally Beautiful will handle any three-digit status code you throw at it. It comes with translation data for the following common errors:
+Exceptionally Beautiful can handle any three-digit status code you throw at it. It comes with translation data for the following common errors:
 
 | Code |         Error         |
 |------|:---------------------:|
@@ -33,8 +33,6 @@ Exceptionally Beautiful will handle any three-digit status code you throw at it.
 | 422  | Unprocessable Entity  |
 | 500  | Internal Server Error |
 | 502  | Bad Gateway           |
-
-Any status code that is either unrecognized or missing translation data will fall back to default messaging.
 
 ## Customizing
 
@@ -49,11 +47,11 @@ ExceptionallyBeautiful.setup do |config|
 end
 ```
 
-**Important:** If you want Exceptionally Beautiful to handle an error code other than the defaults specified, it must be added to `config.errors` (and your translation file if you wish to customize the content).
+**Important:** If you want Exceptionally Beautiful to handle an error code other than the defaults specified, it must be added to `config.errors`.
 
 ### Error Messages
 
-You can customize and add new errors to the translation file copied over by the initializer (`config/locales/exceptionally_beautiful.en.yml`).
+You can customize and add new errors to the translation file copied over by the initializer (`config/locales/exceptionally_beautiful.en.yml`). Error codes missing translation data will fall back to default messaging.
 
 #### I18n Gotcha
 
