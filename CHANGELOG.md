@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.3 (2015-03-02)
+
+* Fixed issue with `Gemfile.lock` being stuck on 0.1.1.
+
 ## 0.1.2 (2015-02-25)
 
 * Specify error codes the gem will handle via `config.errors`.
