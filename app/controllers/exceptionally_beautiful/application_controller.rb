@@ -1,4 +1,6 @@
 module ExceptionallyBeautiful
-  class ApplicationController < ActionController::Base
+  class ApplicationController < ::ApplicationController
+    helper Rails.application.routes.url_helpers
+    helper ExceptionallyBeautiful::RenderHelper
   end
 end
