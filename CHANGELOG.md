@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.4 (2015-07-13)
+
+* Allow an application's named routes to work within custom layouts.
+
 ## 0.1.3 (2015-03-02)
 
 * Fixed issue with `Gemfile.lock` being stuck on 0.1.1.
