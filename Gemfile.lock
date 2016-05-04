@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    exceptionally_beautiful (0.1.4)
-      rails (>= 4.2.0)
+    exceptionally_beautiful (0.1.5)
+      rails (>= 4.2.0.beta4)
       redcarpet (> 3.0.0)
 
 GEM

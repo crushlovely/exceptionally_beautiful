@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.5 (2015-07-13)
+
+* Added support for Rails 5 while in beta.
+
 ## 0.1.4 (2015-07-13)
 
 * Allow an application's named routes to work within custom layouts.
