@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     exceptionally_beautiful (0.1.4)
-      rails (~> 4.2.0)
+      rails (>= 4.2.0)
       redcarpet (> 3.0.0)
 
 GEM
@@ -194,3 +194,6 @@ DEPENDENCIES
   rspec
   rspec-rails
   rubocop
+
+BUNDLED WITH
+   1.12.1
